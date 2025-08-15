@@ -23,3 +23,36 @@ Content-Type: application/json
   "name": "John Doe",
   "techStack": "Java, Spring Boot, PostgreSQL"
 }
+
+###
+GET http://localhost:8080/tasks
+
+
+###
+POST http://localhost:8080/tasks
+Content-Type: application/json
+
+{
+  "title": "Finish Spring Boot project",
+  "description": "Complete the beginner CRUD app",
+  "status": "In Progress",
+  "dueDate": "2025-08-15"
+}
+
+
+
+###
+POST http://localhost:8080/tasks
+Content-Type: application/json
+
+{
+  "title": "Finish Spring Boot project",
+  "description": "Complete the beginner CRUD app",
+  "status": "Done",
+  "dueDate": "2025-08-15"
+}
+
+###
+DELETE http://localhost:8080/tasks/1
+
+

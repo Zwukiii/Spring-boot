@@ -1,0 +1,25 @@
+###
+
+GET http://localhost:8080/software-engineers
+
+###
+
+POST http://localhost:8080/software-engineers
+Content-Type: application/json
+
+{
+  "name": "James",
+  "techStack": "Js, node, react"
+}
+
+###
+DELETE http://localhost:8080/software-engineers/1
+
+###
+PUT http://localhost:8080/software-engineers/1
+Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "techStack": "Java, Spring Boot, PostgreSQL"
+}

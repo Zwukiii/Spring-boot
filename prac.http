@@ -1,0 +1,131 @@
+// Students
+###
+GET http://localhost:8080/students
+
+###
+
+POST http://localhost:8080/students
+Content-Type: application/json
+
+{
+  "studentNumber": "STU001",
+  "firstName": "John",
+  "lastName": "Doe",
+  "email": "john.doe@university.edu",
+  "major": "Computer Science",
+  "enrollmentYear": 2024
+}
+
+###
+GET http://localhost:8080/students/1
+
+
+###
+DELETE http://localhost:8080/students/4
+
+###
+GET http://localhost:8080/students/major/Computer Science
+
+
+//Courses
+
+###
+GET http://localhost:8080/courses
+
+###
+POST http://localhost:8080/courses
+Content-Type: application/json
+
+{
+  "courseCode": "CS101",
+  "courseName": "Introduction to Programming",
+  "instructor": "Dr. Johnson",
+  "credits": 3,
+  "semester": "Fall 2024"
+}
+
+###
+DELETE http://localhost:8080/courses/2
+
+###
+GET http://localhost:8080/courses/instructor/Dr. Johnson
+
+
+//Enrollment
+###
+GET http://localhost:8080/enrollments
+
+###
+GET http://localhost:8080/enrollments/1
+
+###
+POST http://localhost:8080/enrollments
+Content-Type: application/json
+
+{
+  "studentId": 1,
+  "courseId": 1,
+  "enrollmentDate": "2024-08-17",
+  "grade": "A"
+}
+
+###
+PUT http://localhost:8080/enrollments/1
+Content-Type: application/json
+
+{
+  "studentId": 1,
+  "courseId": 1,
+  "enrollmentDate": "2024-08-17",
+  "grade": "A+"
+}
+
+###
+DELETE http://localhost:8080/enrollments/1
+
+###
+GET http://localhost:8080/enrollments/course/1
+
+
+###
+POST http://localhost:8080/students
+Content-Type: application/json
+
+{
+  "studentNumber": "STU001",
+  "firstName": "Alice",
+  "lastName": "Johnson",
+  "email": "alice.johnson@university.edu",
+  "major": "Computer Science",
+  "enrollmentYear": 2024
+}
+
+###
+POST http://localhost:8080/courses
+Content-Type: application/json
+
+{
+  "courseCode": "CS101",
+  "courseName": "Programming Fundamentals",
+  "instructor": "Dr. Smith",
+  "credits": 3,
+  "semester": "Fall 2024"
+}
+
+###
+POST http://localhost:8080/enrollments
+Content-Type: application/json
+
+{
+  "studentId": 1,
+  "courseId": 1,
+  "enrollmentDate": "2024-08-17",
+  "grade": "A"
+}
+
+###
+GET http://localhost:8080/students/major/Computer Science
+###
+GET http://localhost:8080/courses/instructor/Dr. Smith
+###
+GET http://localhost:8080/enrollments/student/1
